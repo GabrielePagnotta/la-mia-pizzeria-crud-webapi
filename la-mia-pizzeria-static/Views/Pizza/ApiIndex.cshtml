@@ -1,17 +1,16 @@
-﻿@model Pizza[];
-
+﻿
 
 @{
     ViewData["Title"] = "Le pizze";
     Layout = "~/Views/Shared/_NewLayout.cshtml";
-    var pizza = Model;
+    
 }
 
-  <h1>@ViewData["Message"]</h1>
-        <main role="main" class="pb-3">
-            <div class="background-img">
-                
-                <div class="w-75 m-auto bg-dark">
+<h1>@ViewData["Message"]</h1>
+<main role="main" class="pb-3">
+    <div class="background-img">
+
+        <div class="w-75 m-auto bg-dark">
             <table class="table">
                 <thead>
                     <tr>
@@ -26,9 +25,17 @@
                 <tbody id="pizza">
                 </tbody>
             </table>
+            @section Scripts
+            {
+                <script>
+
+                    
+                    loadpizza()
+                </script>
+            }
         </div>
-            </div>
-        </main>
+    </div>
+</main>
 
 
 

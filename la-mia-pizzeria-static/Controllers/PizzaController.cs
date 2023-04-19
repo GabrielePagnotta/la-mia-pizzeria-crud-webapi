@@ -17,6 +17,11 @@ namespace la_mia_pizzeria_static.Controllers
             var pizza= ctx.Pizzas.ToArray();
             return View(pizza);
         }
+
+        public IActionResult ApiIndex()
+        {
+            return View();
+        }
         
         public IActionResult Details(int id)
         {
